@@ -25,7 +25,7 @@ class Address:
             while True:
                 i = input(">> ")
                 if i == "y":
-                    print("代码重构中，暂时不能运行")# 需要更改
+                    print("代码重构中，暂时不能运行")  # 需要更改
                     break
                 elif i == "n":
                     print("重新输入联系人信息")
@@ -109,7 +109,11 @@ class Address:
 
 
 # 初始化添加
-ab = {"张聪": Address(["本机"], ["q635277167@outlook.com", "qf-cong@163.com"])}
+ab = {
+    "张聪": Address(
+        ["本机"], ["635277167@qq.com", "q635277167@outlook.com"], ["15063743227"]
+    )
+}
 
 
 def creation_tips(name):

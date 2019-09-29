@@ -20,7 +20,7 @@ target_dir = 'E:\\Backup'
 
 # 如果目标目录不存在则创建目录
 if not os.path.exists(target_dir):
-    os.mkdir(target_dir) # 创建目录
+    os.mkdir(target_dir)  # 创建目录
 
 # 3. 备份文件将打包压缩成 zip 文件。
 # 4. 将当前日期作为主备份目录下的子目录名称
@@ -38,7 +38,7 @@ if not os.path.exists(today):
 
 # 5. 我们使用 zip 命令将文件打包成 zip 格式
 zip_command = 'zip -r {0} {1}'.format(target,
-' '.join(source))
+                                      ' '.join(source))
 # 运行备份
 print('Zip command is:')
 print(zip_command)

@@ -20,7 +20,7 @@ target_dir = 'E:\\Backup'
 
 # 如果目标目录还不存在，则进行创建
 if not os.path.exists(target_dir):
-    os.mkdir(target_dir) # 创建目录
+    os.mkdir(target_dir)  # 创建目录
 
 # 3. 备份文件将打包压缩成 zip 文件。
 # 4. 将当前日期作为主备份目录下的
@@ -36,7 +36,7 @@ comment = input('Enter a comment --> ')
 if len(comment) == 0:
     target = today + os.sep + now + '.zip'
 else:
-    target = today + os.sep + now + '_' + 
+    target = today + os.sep + now + '_' +
     comment.replace(' ', '_') + '.zip'
 # 上面确实会发生错误，这是必要的一步。
 
@@ -44,7 +44,7 @@ else:
 if not os.path.exists(today):
     os.mkdir(today)
     print('Successfully created directory', today)
-    
+
 # 5. 我们使用 zip 命令将文件打包成 zip 格式
 zip_command = "zip -r {0} {1}".format(target,
                                       ' '.join(source))
